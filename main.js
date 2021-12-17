@@ -74,14 +74,14 @@ function to1p()
 {
     document.getElementById("home").scrollIntoView(true);
 }
-function send(){
+function sendEmail()
+{
     Email.send({
         Host : "smtp.gmail.com",
-        SecureToken :"62a12405-e074-40a5-8d1f-94c59a84c28c",
         Username : "geetha.deepika1234@gmail.com",
-        Password : "37E6818996AEF1EDBCACCFB8F614C7273253",
-        To : 'geetha.deepika1234@gmail.com',
-        From : document.getElementById("mail").value,
+        Password : "AB0E039086C4D8777E250F78D091D154421B",
+        To : 'geethaalameludeepika7904@gmail.com',
+        From : "geetha.deepika1234@gmail.com",
         Subject : "This is the subject",
         Body : "And this is the body"
     }).then(
