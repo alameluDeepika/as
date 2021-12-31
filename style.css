@@ -3,13 +3,18 @@
     --text1:rgb(0, 0, 0);
     --text2:rgba(175, 12, 12, 0.698);
     --bg1:rgba(255, 255, 255, 0.925);
-    --bg2:rgba(175, 12, 12, 0.698);;
+    --bg2:rgba(175, 12, 12, 0.698);
+    
  
  }
  *{
-    font-family: 'Roboto', sans-serif;
-     margin:0;
+        margin:0;
      padding:0;
+     font-family: 'Cabin', sans-serif;
+ }
+ body{
+    background: rgb(255,173,173);
+    background: linear-gradient(125deg, rgba(255,173,173,1) 0%, rgba(255,155,86,1) 98%);
  }
  html{
      scroll-behavior: smooth;
@@ -59,7 +64,7 @@
      text-transform: uppercase;
  }
  #contact{
-     background-color: var(--bg1);
+    
          background-position:left;
      background-size:cover;
      background-repeat: no-repeat;
@@ -70,10 +75,11 @@
      border-radius:50%;
  }
  #exp{
-     background-color:  var(--text1);
+     background: rgb(255,173,173);
+     background: linear-gradient(125deg, rgba(255,173,173,1) 0%, rgba(255,155,86,1) 98%);;
      font-size: 3vw;
      color:var(--bg1);
-     text-decoration-line: none;
+          text-decoration-line: none;
  border-radius: 40px;
  
  }
@@ -89,8 +95,7 @@
      border-radius: 30px;;
  }
  #about{  
-     background-color: var(--bg1);
-     font-weight: bold;
+         font-weight: bold;
     text-align:center;
  }
  #det{
@@ -110,25 +115,28 @@
      font-size:2vw;  
      text-align: center;
  }
- #name,#numn{
+ #name,#numn,#mail{
      color:var(--text1);
      text-transform: capitalize;
      background-color: transparent;
-     border:1px solid var(--bg2);
+     border: 1px solid red;
  }
  #quer
  {    font-family: 'Sora', sans-serif;
      background-color:var(--bg1);
      color: var(--text1);
-     border:1px solid var(--bg2);
+     background-color: transparent;
+         border: 1px solid red;
     }
  #bb{
-    
+     width: 40%;
     color:var(--text1);
     font-size:2vw;
-    background-color:  var(--bg1);
+    background: rgb(255,173,173);
+    background: linear-gradient(125deg, rgba(255,173,173,1) 0%, rgba(255,155,86,1) 98%);
     font-family: 'Sora', sans-serif;
     border-radius: 30px;
+    box-shadow: 2px 2px 2px black;
  }
  .line{
      height: 80%;
@@ -138,7 +146,7 @@
      margin-left:30%;
      background-color:var(--bg2);
  }
- #pg4,#pg3,#pg2,#pg1{
+ #pg4,#pg3,#pg2,#pg5{
      display: none;
  }
  #side{
@@ -167,7 +175,8 @@
  #p1::before{
      content:"";
      background-image:url("People/People/IMG_20210717_171041.jpg");
-     background-position: center;
+   
+         background-position: center;
      background-size: cover;opacity:70%;
      position: absolute;
      top: 0px;
@@ -185,6 +194,21 @@
     right: 0px;
     bottom: 0px;
     left: 0px;
+}
+#load
+{
+    color:white;
+    animation-name:colorv;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes colorv {
+    0%{color:rgb(255, 38, 38);}
+    20%{color:rgb(255, 132, 132);}
+    40%{color:rgb(252, 119, 10);}
+    60%{color:rgb(248, 105, 3);}
+    80%{color:rgb(252, 207, 7);}
+    90%{color:rgb(166, 255, 0);}
 }
 #p3::before{
     content:"";
@@ -210,17 +234,26 @@
     bottom: 0px;
     left: 0px;
 }
+#p5::before{
+    content:"";
+    background-image:url("still life/IMG_20210717_113950.jpg");
+    background-position: center;
+    background-size: cover;
+    opacity:70%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
  #close{
      font-size:45px;
      float:right;
      background-color: transparent;
      border:none;
      margin-right: 10%;
-     position: absolute;
-     top: 0px;
-     right: 0px;
-     bottom: 0px;
-     left: 0px;
+    
  }
  #cone{
      margin-top:20%;
@@ -261,29 +294,82 @@
 }
  .i1{
     color:var(--bg1);
-    font-weight: bold;
-    font-size:4vw;
+    font-size:1vw;
     position: relative; 
     
      
  }
- #p1,#p2,#p3,#p4{
-    height:50vh;
-    margin:0 20px 10px 20px;
+ #p1,#p2,#p3,#p4,#p5{
+    height:20vh;
+   
         border-color: var(--bg2);
     border-style: solid;
     border-width:1px;
     position: relative; 
     
 }
-#p1:hover{
-    filter:drop-shadow(8px 8px 10px var(--bg2) );
+.x{
+font-size:2vw;
+   
 }
-#p2:hover{
-    filter:drop-shadow(8px 8px 10px var(--bg2));
+#one{
+    font-size:3vw;
+    margin-right:5%;
 }
-#p3:hover{
-    filter:drop-shadow(8px 8px 10px var(--bg2));
-}#p4:hover{
-    filter:drop-shadow(8px 8px 10px var(--bg2) );
+#two{
+    font-size:2vw;
+    margin-right:20px;
+}
+#th3{
+    font-size:4vw;
+    margin-right:20px;
+}
+p{
+    font-size: 3vw;
+    font-weight: bolder;
+}
+.jo{
+    
+margin:1vw;
+width:2vw;
+height:2vw;
+border-radius:50%;
+border:2px solid black;
+background-color:transparent;
+transition: 0.5s;
+}
+.jo:hover{
+    background-color:rgba(255, 0, 0, 0.698)
+}
+#jjh{
+    background-image:url("People/People/IMG_20210717_170856.jpg");
+    background-position:center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+}
+#jjh2{
+    background-image:url("nature/IMG_20210717_135408.jpg");
+    background-position:center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+}#jjh3{
+    background-image:url("nature/IMG_20210717_115215.jpg");
+    background-position:center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+}#jjh4{
+    background-image:url("still life/IMG_20210717_113950.jpg");
+    background-position:center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+}#jjh5{
+    background-image:url("butterfly/gt3.jpg");
+    background-position:center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    transition: 0.5s;
 }
