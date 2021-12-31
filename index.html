@@ -6,154 +6,221 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mitra Photography</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://smtpjs.com/v3/smtp.js">
-  </script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+  (function() {
+  emailjs.init("user_RaERf9bF6wtWW8xfzRNI8");
+  })();
   </script>
   </script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@300&display=swap" rel="stylesheet">
-<script src="https://use.fontawesome.com/f3d6b747f4.js"></script>
-
-<body onscroll="hide()"  class="container" style="background-color: white;">
-  <section id="collections">
-    <button id="open" onclick="o()"><i class="fa fa-camera" aria-hidden="true"></i></button>
-        <div class="row justify-content-start">
-          <div id="side" class="col-lg-3 col-md-3 col-xs-12 col-sm-12">
-            <button id="close" onclick="c()">&times;</button>
-            
-            <div id="cone">
-              <a href="#home" class="link" onclick="c()">Home</a>
-              <a href="#about" class="link" onclick="c()">Contacts</a>
-              <a href="#collections" class="link" onclick="c()">Collections</a>
-              <a href="#contact" class="link" onclick="c()">Contacts</a>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+  <script src="https://use.fontawesome.com/f3d6b747f4.js"></script>
+  
+<body onscroll="hide()"  >
+  <div id="pre" class="container-fluid bg-dark" style="height: 100vh;">
+    <div class="row align-items-center" style="height: 100%;text-align: center;">
+      <i class="fa fa-camera" id="load" aria-hidden="true" style="color:white;font-size:5vw"></i>
+    </div>
+    
+  </div>
+  <div id="page" class="container" style="display:none" onload="myfunction()">
+    <section>
+      <button id="open" onclick="o()"><i class="fa fa-camera" aria-hidden="true"></i></button>
+          <div class="row justify-content-start">
+            <div id="side" class="col-lg-3 col-md-3 col-xs-12 col-sm-12">
+              <button id="close" onclick="c1()">&times;</button>
+              
+              <div id="cone">
+                <a href="#home" class="link" onclick="c1()">Home</a>
+                <a href="#about" class="link" onclick="c1()">About</a>
+                <a href="#collections" class="link" onclick="c1()">Collections</a>
+                <a href="#contact" class="link" onclick="c1()">Contact</a>
+                </div>
+            </div>
+          </div>
+      
+     </section>
+    <section id="home">
+    <div id="opac" class="row justify-content-center align-items-center">
+      <div id="con1" class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <h1>Mitra Photography</h1>
+        <h6>Capture Life</h6>
+        <a href="#coll" class="btn"  id="exp" >
+          <u>Explore</u>
+        </a>
+      </div>
+    
+    </div>
+    </section>
+    <section>
+      <section id="about" class="row" style="height:auto;" >  
+        <div class="col-lg-6 col-md-6 col-sm-8 col-xs-8">
+          <div class="row justify-content-center">
+            <img src="mitra_photo/mitra.png" style="height:500px;margin:20px;"class="col-lg-8 col-md-8 col-sm-12 xol-xs-12 align-self-center">
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-8 col-xs-8">
+            <div class="row justify-content-center" style="height:500px;">
+              <div class="col-lg-8 col-md-8 col-sm-9 col-xs-9 text-center text-dark align-self-center" >
+               <p style="font-size:2vw;font-weight:700;padding-top:1vw"> I am Mitra,an Engineer working in an Information Technology Sector.
+                Photography is a hidden skill,which got discovered in my college years.
+                Photography had made me to love many things and allowed me to add beauty to the world:)</p>
               </div>
-          </div>
-        </div>
-    
-   </section>
-  <section id="home">
-  <div id="opac" class="row justify-content-center align-items-center">
-    <div id="con1" class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-      <h1>Mitra Photography</h1>
-      <h6>Capture Life</h6>
-      <a href="#coll" class="btn"  id="exp" >
-        <u>Explore</u>
-      </a>
-    </div>
-  
-  </div>
-  </section>
-  <section>
-    <section id="about" class="row" style="height:auto">  
-      <div class="col-lg-6 col-md-6 col-sm-8 col-xs-8">
-        <div class="row justify-content-center">
-          <img src="mitra_photo/IMG_20210717_164909.jpg" style="height:500px;margin:20px;"class="col-lg-8 col-md-8 col-sm-12 xol-xs-12 align-self-center">
-        </div>
-      </div>
-      <div class="col-lg-6 col-md-6 col-sm-8 col-xs-8">
-          <div class="row justify-content-center" style="height:500px;">
-            <div class="col-lg-8 col-md-8 col-sm-9 col-xs-9 text-center text-dark align-self-center" >
-             <p style="font-size:2vw;font-weight:700;padding-top:1vw"> I am Mitra,an Engineer working in an Information Technology Sector.
-              Photography is a hidden skill,which got discovered in my college years.
-              Photography had made me to love many things and allowed me to add beauty to the world:)</p>
             </div>
-          </div>
+        </div>
+       
+    </section>
+    </section>
+    <section id="collections">
+    <div class="container">
+      <div class="row justify-content-center mt-4">
+   <div class="col-2" id="p1" onclick="ch(event)"><span class="i1">People</span></div>
+        <div class="col-2" id="p2" onclick="ch(event)"><span class="i1">Nature</span></div>
+        <div class="col-2" id="p3" onclick="ch(event)"><span class="i1">Butterfly</span></div>
+        <div class="col-2" id="p4" onclick="ch(event)"><span class="i1">Scenaries</span></div>
+        <div class="col-2" id="p5" onclick="ch(event)"><span class="i1">Still Life</span></div>
       </div>
-     
-  </section>
- 
-  </section>
-  <section class="container" id="banner" style="height:100vh;">
-    <div class="row  h-100 justify-content-center align-items-center">
-          <div id="collk"class="col-lg-4 col-md-4 col-sm-8 col-xs-8 text-center h-50" style="padding-top:5%" >
-            Collections
+    </div>
+     <section id="pg1" class="container" >
+       <div class="row justify-content-center align-items-center" style="height:100vh">
+        <div class="col-lg-5 text-center align-self-center"><p>People</p><div class="col-lg-12 text-center ">
+          <button id="img1" class="jo" onclick="chl_1(event)"></button>
+          <button id="img2" class="jo" onclick="chl_1(event)"></button>
+          <button id="img3" class="jo" onclick="chl_1(event)"></button>
+          <button id="img4" class="jo" onclick="chl_1(event)"></button>
+          <button id="img5" class="jo" onclick="chl_1(event)"></button>
+         </div></div>
+         <div  class="kj col-lg-7" id="jjh" style="height:70%;position: relative;">
+          <a href="" onclick="chl_1()">
+            <i class="fa fa-angle-double-right" style="color:black;position:absolute;bottom:10px;right:10px;font-size:3vw;">
+            </i></a>
           </div>
-    </div>
-  </section>
-  <div class="container">
-    <div class="row justify-content-center mt-4">
- <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 mt-2" id="p1" onclick="ch(event)"><span class="i1">People</span></div>
-      <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 mt-2" id="p2" onclick="ch(event)"><span class="i1">Nature</span></div>
-      <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 mt-2" id="p3" onclick="ch(event)"><span class="i1">Wildlife</span></div>
-      <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 mt-2" id="p4" onclick="ch(event)"><span class="i1">Scenaries</span></div>
-    </div>
-  </div>
-  
-
-  <div class="container gall p-2">
-    <div class="row pages" id="pg1">
-      <img class="col-lg-4 col-md-6 col-sm-12 col-xs-12 mt-2"  id="a" src="butterfly/gt5.jpg" style="height:50vh">
-      <img class="col-lg-4 col-md-6 col-sm-12 col-xs-12 mt-2" src="Background/g1.jpg" style="height:50vh">
-      <img class="col-lg-4 col-md-6 col-sm-12 col-xs-12 mt-2" src="butterfly/gt3.jpg" style="height:50vh">
-      <img class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mt-2" src="nature/IMG_20210717_121123.jpg" style="height:70vh">
-      <img class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mt-2" src="nature/IMG_20210717_115105.jpg" style="height:70vh">
-      <img class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mt-2" src="nature/IMG_20210717_135408.jpg" style="height:70vh">
-      <img class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mt-2" src="nature/IMG_20210717_135146.jpg" style="height:70vh">
+       </div>
+     </section>
+     <section id="pg2" class="container">
+      <div class="row justify-content-center align-items-center" style="height:100vh">
+        <div class="col-lg-5 text-center align-self-center"><p>Nature</p> <div class="col-lg-12 text-center ">
+          <button id="img11" class="jo" onclick="chl_2(event)"></button>
+          <button id="img21" class="jo" onclick="chl_2(event)"></button>
+          <button id="img31" class="jo" onclick="chl_2(event)"></button>
+          <button id="img41" class="jo" onclick="chl_2(event)"></button>
+          <button id="img51" class="jo" onclick="chl_2(event)"></button>
+          <button id="img61" class="jo" onclick="chl_2(event)"></button>
+          <button id="img71" class="jo" onclick="chl_2(event)"></button>
+         </div></div>
+  <div  class="kj col-lg-7" id="jjh2" style="height:70%;position: relative;">
+    <a href="" onclick="chl_2()">
+      <i class="fa fa-angle-double-right" style="color:black;position:absolute;bottom:10px;right:10px;font-size:3vw;">
+      </i></a>
+        </div>
       </div>
-      <div class="row pages" id="pg2">
-      <img class="col-lg-4 col-md-6 col-sm-12 col-xs-12 mt-2" src="Background/g2.jpg" style="height:50vh">
-      <img class="col-lg-4 col-md-6 col-sm-12 col-xs-12 mt-2" src="nature/IMG_20210717_170625.jpg" style="height:50vh">
-      <img class="col-lg-4 col-md-6 col-sm-12 col-xs-12 mt-2" src="nature/IMG_20210717_134335.jpg" style="height:50vh">
-      <img class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mt-2" src="nature/IMG_20210717_170429.jpg" style="height:70vh">
-      <img class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mt-2" src="nature/IMG_20210717_134812.jpg" style="height:70vh">
-      <img class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mt-2" src="People/People/IMG_20210717_170952.jpg" style="height:70vh">
-      <img class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mt-2" src="still life/IMG_20210717_113950.jpg" style="height:70vh">
-    </div>
-      <div class="row pages" id="pg3">
-      <img class="col-lg-4 col-md-6 col-sm-12 col-xs-12 mt-2" src="Background/g5.jpg" style="height:50vh">
-      <img class="col-lg-4 col-md-6 col-sm-12 col-xs-12 mt-2" src="Background/g3.jpg" style="height:50vh">
-      <img class="col-lg-4 col-md-6 col-sm-12 col-xs-12 mt-2" src="People/People/IMG_20210717_171041.jpg" style="height:50vh">
-      <img class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mt-2" src="nature/IMG_20210717_172705.jpg" style="height:70vh">
-      <img class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mt-2" src="Background/PicsArt_12-09-12.35.52.jpg" style="height:70vh">
-      <img class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mt-2" src="butterfly/gt6.JPG" style="height:70vh">
-      <img class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mt-2" src="butterfly/gt4.jpg" style="height:70vh">
-    </div>
-      <div class="row pages" id="pg4">
-      <img class="col-lg-4 col-md-6 col-sm-12 col-xs-12 mt-2" src="Background/g4.jpg" style="height:50vh">
-      <img class="col-lg-4 col-md-6 col-sm-12 col-xs-12 mt-2" src="People/People/IMG_20210717_171115.jpg" style="height:50vh">
-      <img class="col-lg-4 col-md-6 col-sm-12 col-xs-12 mt-2" src="People/People/IMG_20210717_171313.jpg" style="height:50vh">
-      <img class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mt-2" src="butterfly/gt2.jpg" style="height:70vh">
-      <img class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mt-2" src="nature/IMG_20210717_115215.jpg" style="height:70vh">
-      <img class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mt-2" src="nature/IMG_20210717_170747.jpg" style="height:70vh">
-      <img class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mt-2" src="People/People/IMG_20210717_170856.jpg" style="height:70vh">
-    </div>
-    
+    </section>
+    <section id="pg4" class="container">
+      <div class="row justify-content-center align-items-center"  style="height:100vh;">
+        <div class="col-lg-5 text-center align-self-center"><p>Scenaries</p>
+          <div class="col-lg-12 text-center">
+            <button id="img12" class="jo" onclick="chl_3(event)"></button>
+            <button id="img22" class="jo" onclick="chl_3(event)"></button>
+            <button id="img32" class="jo" onclick="chl_3(event)"></button>
+            <button id="img42" class="jo" onclick="chl_3(event)"></button>
+            <button id="img52" class="jo" onclick="chl_3(event)"></button>
+            <button id="img62" class="jo" onclick="chl_3(event)"></button>
+            <button id="img72" class="jo" onclick="chl_3(event)"></button>
+           </div></div>
+             <div  class="kj col-lg-7" id="jjh3" style="height:70%;position:relative" >
+              <a href="" onclick="chl_3()">
+                <i class="fa fa-angle-double-right" style="color:black;position:absolute;bottom:10px;right:10px;font-size:3vw;">
+                </i></a>
+         </div>
+      </div>
+    </section>
+    <section id="pg5" class="container">
+      <div class="row justify-content-center align-items-center" style="height:100vh;">
+        <div class="col-lg-5 text-center align-self-center"><p>Still life</p>
+          <div class="col-lg-12 text-center">
+            <button id="img13" class="jo" onclick="chl_4(event)"></button>
+            <button id="img23" class="jo" onclick="chl_4(event)"></button>
+            <button id="img33" class="jo" onclick="chl_4(event)"></button>
+            <button id="img43" class="jo" onclick="chl_4(event)"></button>
    </div>
-  <br> 
-  <section id="contact" class="container p-2" style="height:auto;">
-    <div class="row justify-content-center" style="height:auto">
-    <div id="cont2" class="col-lg-5" style="margin-top:2%;height:auto;">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-12 col-md-12 col-sm-8 col-xs-8"><h3 class="col-lg-12">Contact us</h3></div>
-          <div class="col-lg-12  col-md-12 col-sm-8 col-xs-8">
-            <form class="col-lg-12 col-md-12 col-sm-8 col-xs-8" id="contact-form">              <div class="form-group">
-                       <br>
-              <input id="name" class="form-control" type="text" placeholder="name">
-              <br>
-              <input id="numn"   class="form-control"  type="number" placeholder="Mobile Number">
-              <br>
-              <input id="mail"   class="form-control"  type="email" placeholder="Email">
-              <br>
-              <label class="form-text" for="quer">Query</label>
-      
-             <textarea class="form-control" id="quer">
-             </textarea>
-             <br>
-             <button id="bb" class="btn btn-danger" onclick="sendEmail()">Send</button>
+        </div>
+  <div  class="kj col-lg-7" id="jjh4" style="height:70%;position: relative;">
+    <a href="" onclick="chl_4()">
+      <i class="fa fa-angle-double-right" style="color:black;position:absolute;bottom:10px;right:10px;font-size:3vw;">
+      </i></a>
+       </div>
+  </div>
+    </section>
+    <section id="pg3" class="container">
+      <div class="row justify-content-center align-items-center"  style="height:100vh;">
+        <div class="col-lg-5 text-center align-self-center"><p>Butterfly</p>
+          <div class="col-lg-12 text-center">
+            <button id="img14" class="jo" onclick="chl_5()"></button>
+            <button id="img24" class="jo" onclick="chl_5()"></button>
+            <button id="img34" class="jo" onclick="chl_5()"></button>
+            <button id="img44" class="jo" onclick="chl_5()"></button>
+            <button id="img54" class="jo" onclick="chl_5()"></button>
+                  </div></div>
+                  
+                   <div  class="kj col-lg-7 " id="jjh5" style="height:70%;position:relative;">
+                   <a href="" onclick="chl_5()"><i class="fa fa-angle-double-right" style="color:black;position:absolute;bottom:10px;right:10px;font-size:3vw;"></i></a>
+         </div>
+              </div>
+    </section>
+  </section>
+          <br> 
+    <section id="contact" class="container p-2" style="height:auto;">
+      <div class="row justify-content-center" style="height:auto">
+      <div id="cont2" class="col-lg-5" style="margin-top:2%;height:auto;">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-12 col-md-12 col-sm-8 col-xs-8"><h3 class="col-lg-12">Send a message</h3></div>
+            <div class="col-lg-12  col-md-12 col-sm-8 col-xs-8">
+              <form class="col-lg-12 col-md-12 col-sm-8 col-xs-8" id="contact-form">              <div class="form-group">
+                         <br>
+                <input id="name" class="form-control" type="text" placeholder="name">
+                <br>
+                <input id="numn"   class="form-control"  type="number" placeholder="Mobile Number">
+                <br>
+                <input id="mail"   class="form-control"  type="email" placeholder="Email">
+                <br>
+                     
+               <textarea class="form-control" id="quer" placeholder="Query">
+               </textarea>
+               <br>
+               <button id="bb" class="btn btn-danger" onclick="sendMail()">Send</button>
+              </div>
+              </form>
             </div>
-            </form>
           </div>
         </div>
+        
       </div>
-      
-    </div>
-    <div id="cont1" class="col-lg-5 col-md-5 col-xs-12 col-sm-12"></div>
-
-
-  </section> 
-  <button class="btn btn-primary" style="position:fixed;bottom:0px;right:0px;" onclick="to1p()">Back to top</button>
+      <div id="cont1" class="col-lg-5 col-md-5 col-xs-12 col-sm-12">
+           <div class="row x h-100">
+             <div class="col-auto">
+               <p>Reach us:</p>
+             </div>
+             <br>
+             <div class="col-auto">
+              <i id="one"class="fa fa-facebook-f"></i><span>Mitra Photography</span>
+              <br>
+              <i id="two"class="fa fa-envelope" ></i><span>mitra.prabakar@gmail.com</span>
+              <br>
+              <i id="th3" class="fa fa-mobile"></i><span>+91 9442558669</span>
+            </div>
+           </div>
+      </div>
+  
+  
+    </section> 
+    <button class="btn btn-primary" style="position:fixed;bottom:0px;right:0px;" onclick="to1p()">Back to top</button>
+  </div>
+  
+  
 
      <script src="main.js"></script>
 </body>
